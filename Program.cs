@@ -10,23 +10,23 @@ namespace toolbox
     {
         static void Main(string[] args)
         {
-            Tools hammer = new Hammer(5, "Hammer", 2);
-            hammer.describe();
-            hammer.use();
-            Tools wrench = new Wrench(3, "Wrench", 1);
-            wrench.describe();
-            wrench.use();
-            Tools screwdriver = new Screwdriver(4, "Screwdriver", 1);
-            screwdriver.describe();
-            screwdriver.use();
+            
+            Tools wrench = new Wrench( -1);
+            Tools screwdriver = new Screwdriver( 51);  
             Tools Saw = new Saw(2, "Saw", 3);
-            Saw.describe();
-            Saw.use();
             Tools Drill = new Drill(1, "Shovel", 4);
-            Drill.describe();
-            Drill.use();
-            Tools
-            Tools[] tools = { hammer, wrench, screwdriver };
+            Tools hammer = new Hammer(5, "Hammer", 0);
+
+            Tools[] toolslist = { hammer, wrench, screwdriver, Saw, Drill ,null,null};
+            foreach (Tools tool in toolslist) {
+                 tool.use();
+                 tool.describe();
+            }
+            Tools hammar1 = new Hammer(5, "uigygi", 96);
+            Tools wrench1 = new Wrench( 96);
+            toolslist[-1] = hammar1;
+            toolslist[-2] = hammar1;
+            Screwdriver i = new Screwdriver(56);
         }
     }
 }
